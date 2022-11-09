@@ -1,6 +1,6 @@
 import React , { useState , useEffect } from 'react';
-import axios from 'axios';
-import { ENV } from '../../environment/environment'
+import { serviceGetPopularMovies } from '../../features/movies/components/services/serviceGetPopularMovies'
+
 
 export const useFetch = () => {
 	
@@ -10,10 +10,16 @@ export const useFetch = () => {
 
 	
 	const fetchingData = async () => {
-		const url=`https://api.themoviedb.org/3/movie/popular?api_key=${ENV.API_KEY}`
+	
+		
+		
+		
+
 		try{
-			const res= await axios(url)
-			setData(res.data.results)
+			
+			const data= await serviceGetPopularMovies()
+			setData(data)
+			
 			
 		
 			

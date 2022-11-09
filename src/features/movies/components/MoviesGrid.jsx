@@ -2,12 +2,13 @@ import React from 'react';
 import { useFetch } from '../../../common/hooks/useFetch'
 import DisplayMovies from './DisplayMovies'
 import './stylesheets/DisplayMovies.css'
+import { serviceGetPopularMovies } from './services/serviceGetPopularMovies'
 
 
 const MoviesGrid = () => {
 	
-	const {data, isLoading, error} = useFetch();
-	console.log(data)
+	const {data, isLoading, error} = useFetch(serviceGetPopularMovies);
+	
 	
 	return(
 		<>
