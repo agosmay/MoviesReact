@@ -9,9 +9,9 @@ const MoviesGrid = () => {
 	
 	const {data, isLoading, error} = useFetch(serviceGetPopularMovies);
 	
-	
 	return(
 		<>
+			
 			<h1 className="title">MOVIES</h1>
 			<ul className="grid-container">
 			{
@@ -21,6 +21,7 @@ const MoviesGrid = () => {
 						id={movie.id}
 						title={movie.title}
 						poster={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+						overview={movie.overview}
 						
 						
 						

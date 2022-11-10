@@ -10,25 +10,13 @@ export const useFetch = () => {
 
 	
 	const fetchingData = async () => {
-	
-		
-		
-		
-
 		try{
-			
 			const data= await serviceGetPopularMovies()
-			setData(data)
-			
-			
-		
-			
-			
-			
+			setData(data)		
 		}catch(err){
-			
 			console.log(err)
-			
+		}finally{
+			setIsLoading(false)
 		}
 		
 		
