@@ -1,3 +1,4 @@
+import { TMDB } from '../../../../config/tmdb'
 export const moviesAdapter = (movies)=> {
 	
 	
@@ -10,7 +11,7 @@ export const moviesAdapter = (movies)=> {
 		original_title: movie.original_title,
 		overview: movie.overview,
 		popularity: movie.popularity,
-		poster_path: movie.poster_path,
+		poster_path: TMDB.images.base_url + TMDB.images.backdrop_sizes.w300 + movie.poster_path,
 		release_date: movie.release_date,
 		title: movie.title,
 		vote_average: movie.vote_average,

@@ -1,8 +1,8 @@
 import React , { useState , useEffect } from 'react';
-import { serviceGetPopularMovies } from '../../features/movies/components/services/serviceGetPopularMovies'
 
 
-export const useFetch = () => {
+
+export const useFetch = (service) => {
 	
 	const [data, setData]=useState([]);
 	const [isLoading, setIsLoading]=useState(true);
@@ -11,7 +11,7 @@ export const useFetch = () => {
 	
 	const fetchingData = async () => {
 		try{
-			const data= await serviceGetPopularMovies()
+			const data= await service()
 			setData(data)		
 		}catch(err){
 			console.log(err)

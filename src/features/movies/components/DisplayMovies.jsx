@@ -8,6 +8,7 @@ const DisplayMovies= ( { title , poster , overview } ) => {
 					<div>{title}</div>
 					<img src={poster} alt={title} />
 					<p className="movieOverview">{overview}</p>
+					<button className="buttonPlay" onClick={()=> alert(`Watch Movie ${title}`)}>Play</button>
 				</li>
 		</>
 		

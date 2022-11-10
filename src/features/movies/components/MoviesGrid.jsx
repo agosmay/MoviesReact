@@ -20,7 +20,7 @@ const MoviesGrid = () => {
 						key={movie.id}
 						id={movie.id}
 						title={movie.title}
-						poster={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+						poster={movie.poster_path}
 						overview={movie.overview}
 						
 						
