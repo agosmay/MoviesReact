@@ -1,7 +1,7 @@
-import { ENV } from '../../../../environment/environment';
+
 import { TMDB } from '../../../../config/tmdb';
-import axios from 'axios';
-import { moviesAdapter } from '../adapter/adapter'
+
+import { moviesAdapter } from '../adapter/moviesAdapter'
 
 
 export const serviceGetPopularMovies = async () => {
