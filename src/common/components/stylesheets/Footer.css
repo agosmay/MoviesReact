@@ -1,0 +1,20 @@
+.navList {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	border: 3px solid purple;
+}
+
+.navItem {
+	list-style: none;
+	width: 25%;
+	text-align: center;
+	padding: 20px;
+	font-size: 2.2rem;
+	text-decoration: none;
+}
+
+.ancla {
+	color: white;
+	text-decoration: none;
+}
